@@ -5,7 +5,7 @@ description = "Reproducible desk-ready quant tools and mini-projects."
 authors = ["Alexey Mengden"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "validation_series_quant", from = "src" }]
+packages = [{ include = "deskquant", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.13"
