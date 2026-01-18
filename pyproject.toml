@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "desk-quant-toolkit"
+version = "0.1.0"
+description = "Reproducible desk-ready quant tools and mini-projects."
+authors = ["Alexey Mengden"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "validation_series_quant", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+numpy = "^1.26"
+pandas = "^2.2"
+scikit-learn = "^1.5"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3"
+ruff = "^0.6"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+extend-select = ["E", "F", "I"]
+
+[build-system]
+requires = ["poetry-core>=1.9.0"]
+build-backend = "poetry.core.masonry.api"
